@@ -1,0 +1,151 @@
+:root {
+    --gradient: linear-gradient(
+      180deg,
+      rgba(45, 112, 125, 0.73) 0%,
+      #169222 100%
+    );
+    --dark: #001747;
+    --grey: #b1bacb;
+    --grey-border: rgba(210, 210, 210, 0.75);
+    --grey-light: #eeeeee;
+    --grey-dark: #405175;
+    --blue: #2d70fd;
+    --green: #00d8a7;
+    --white: #ffffff;
+}
+
+body {
+    background: var(--gradient);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.todo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    border-radius: 2rem;
+    background: var(--white);
+    padding: 3rem;
+    width: 90%;
+    max-width: 30rem;
+    box-shadow: 0 1rem 3rem 1rem rgba(0, 23, 71, 0.15);
+}
+
+h2 {
+    text-transform: uppercase;
+    color: var(--dark);
+    text-align: center;
+}
+
+.input {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.input-field, .date-field {
+    width: 100%;
+    border: 0.06rem solid var(--grey-border);
+    border-radius: 0.5rem;
+    padding: 0.7rem;
+    font-size: 1rem;
+    color: var(--grey);
+}
+
+input[type="text"]::placeholder, input[type="date"]::placeholder {
+    color: var(--grey);
+}
+
+.btn {
+    color: var(--white);
+    font-size: 1.1rem;
+    padding: 0.7rem 1.5rem;
+    border-radius: 0.3rem;
+    background-color: var(--blue);
+    border: none;
+    cursor: pointer;
+}
+
+ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    overflow-y: scroll;
+    height: 10rem;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 0.5rem;
+
+}
+
+.todo-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.todo-container p {
+    margin: 0;
+    color: var(--dark);
+}
+
+.todo-container .disabled {
+    text-decoration: line-through;
+    color: var(--grey);
+}
+
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+
+.counter {
+    border: 0.06rem solid var(--grey-light);
+}
+
+.counter-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--grey);
+}
+
+.counter-container p {
+    margin: 0;
+    color: var(--dark);
+}
+
+.counter-container button {
+    border: none;
+    background-color: transparent;
+    color: var(--dark);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+.scroll {
+    scrollbar-width: thin;
+    scrollbar-color: var(--blue) transparent;
+}
+
+.scroll::-webkit-scrollbar {
+    width: 0.6rem;
+}
+
+.scroll::-webkit-scrollbar-thumb {
+    background-color: var(--blue);
+    border-radius: 0.5rem;
+}
+
+.scroll::-webkit-scrollbar-track {
+    display: none;
+}
